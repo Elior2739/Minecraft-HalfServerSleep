@@ -1,0 +1,11 @@
+
+
+Messages: # Available Placeholders: %player_name%, %players_sleeping%, %players_sleeping_needed%.
+   player_went_to_sleep: "&6%player_name% &7Went To Sleep. &a%players_sleeping%/%players_sleeping_needed%"
+   player_exited_from_sleep: "&6%player_name% &7Exited From Bed. &a%players_sleeping%/%players_sleeping_needed%"
+   all_needed_players_sleep: "&a%players_sleeping%/%players_sleeping_needed% &7Are Sleeping. Changing To Morning..."
+   
+Settings:
+   morning-time: 24000 # You Can Check It Here (In "24-hour Minecraft day" Section): https://minecraft.gamepedia.com/Daylight_cycle 
+   time-before-change: 3 # Time Before Changing To Morning
+   reguler-world: "world"
