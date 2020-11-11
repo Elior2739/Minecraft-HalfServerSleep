@@ -8,7 +8,7 @@ import me.elior.halfserversleep.Main;
 public class utils {
 	
 	public static int playersSleeping = 0;
-	public static boolean isMorning = false;
+	public static boolean isReachedToNeeded = false;
 
 	public static class Messages {
 		public static String player_went_to_sleep = ChatColor.translateAlternateColorCodes('&', Main.getPlugin(Main.class).getConfig().getString("Messages.player_went_to_sleep"));

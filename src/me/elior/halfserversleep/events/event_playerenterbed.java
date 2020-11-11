@@ -13,11 +13,15 @@ public class event_playerenterbed {
 		utils.playersSleeping += 1;
 		final int neednum = (Bukkit.getWorld(utils.Settings.reguler_world).getPlayers().size() / 2 == 0) ? 1 : Bukkit.getWorld(utils.Settings.reguler_world).getPlayers().size() / 2;
 		Bukkit.broadcastMessage(utils.PlaceholderString(utils.Messages.player_went_to_sleep, e.getPlayer(), utils.playersSleeping, neednum));
-		if(utils.playersSleeping >= neednum) {	
+		if(utils.playersSleeping >= neednum && !utils.isReachedToNeeded) {	
+			utils.isReachedToNeeded = true;
 			Bukkit.broadcastMessage(utils.PlaceholderString(utils.Messages.all_needed_players_sleep, e.getPlayer(), utils.playersSleeping, neednum));
 			Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(Main.class), new Runnable() { public void run() {
 				if(utils.playersSleeping >= neednum) {
 					Bukkit.getWorld(utils.Settings.reguler_world).setTime(utils.Settings.time_before_change);
+					utils.isReachedToNeeded = false;
+				} else {
+					utils.isReachedToNeeded = false;
 				}
 				} }, (utils.Settings.time_before_change * 20));
 		}
