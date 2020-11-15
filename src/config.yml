@@ -2,10 +2,11 @@
 
 Messages: # Available Placeholders: %player_name%, %players_sleeping%, %players_sleeping_needed%.
    player-went-to-sleep: "&6%player_name% &7Went To Sleep. &a%players_sleeping%/%players_sleeping_needed%"
-   player-exited-from-sleep: "&6%player_name% &7Exited From The Bed. &a%players_sleeping%/%players_sleeping_needed%"
+   player-exited-from-sleep: "&6%player_name% &7Exited From Bed. &a%players_sleeping%/%players_sleeping_needed%"
    all-needed-players-sleep: "&a%players_sleeping%/%players_sleeping_needed% &7Are Sleeping. Changing To Morning..."
    
 Settings:
+   cancel-rain: true # Cancel Rain When Is Morning (After Sleep)
    morning-time: 24000 # You Can Check It Here (In "24-hour Minecraft day" Section): https://minecraft.gamepedia.com/Daylight_cycle 
    time-before-change: 3 # Time Before Changing To Morning
    reguler-world: "world"
